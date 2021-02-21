@@ -1,0 +1,211 @@
+body{
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;    /*was 13px*/
+  color: hsl(237, 12%, 33%);
+  line-height: 18px;
+}
+h1{
+  font-size: 2.5em;
+  padding-bottom: 0;
+  color: hsl(238,29%,16%);
+  cursor: default;
+}
+.wrapper{
+  display: grid;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  z-index: 1;
+}
+.main-container{
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  height: 70vh;
+  width: 1249px;
+  background-color: #FFFFFF;
+  border-radius:25px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.main-container-overlay{
+  width: 100%;
+  height: 170%;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  position: absolute;
+  right: 59%;
+  bottom: -20%;
+  z-index: 3;
+}
+.woman-image{
+  position: absolute;
+  top: 12.5%;
+  left: -9%;
+  z-index: 4;
+  width: 50%;
+  height: auto;
+}
+.woman-image-mobile{
+  display: none;
+}
+.cube-image{
+  position: fixed;
+  z-index: 20;
+  top: 410px;
+  left: 219px;
+  width: 12.5%;
+  height: auto;
+}
+.accordion-container{
+  justify-self: end;
+  align-self: center;
+  position: relative;
+  z-index: 4;
+	width: 500px;
+	margin: 10px 11% 30px 0;
+}
+.accordion-container label{   /*this is when closed*/
+	padding: 22px 0px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	height: 25px;
+	cursor: pointer;
+	color: hsl(237, 12%, 33%);
+	line-height: 27px;
+}
+.accordion-container label:hover{
+  color: hsl(14, 88%, 65%);
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+/*label style when input checked*/
+.accordion-container input:checked + label,
+.accordion-container input:checked + label:hover{
+	color: hsl(238,29%,16%);
+  font-weight: bold;
+  border-bottom: 0px solid #fff;
+  cursor: default;
+}
+/*arrow icons*/
+.accordion-container label:after,
+.accordion-container input:checked + label:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 5px;
+	top: 7px;
+	background: transparent url(../images/icon-arrow-down.svg) no-repeat center center;
+}
+.accordion-container input:checked + label:after{
+	background-image: url(../images/icon-arrow-up.svg);
+}
+/*hide the inputs*/
+.accordion-container input{
+	display: none;
+}
+.accordion-container article{  /*the content section*/
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	transition: 0.3s linear;
+}
+.accordion-container p{
+ padding-bottom: 20px;
+ padding-top: 5px;
+ margin: 0px;
+ cursor: default;
+ color: hsl(240, 6%, 50%);
+ font-size: 0.9231em;
+}
+.accordion-container article, article:hover{
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+/*article height*/
+.accordion-container input:checked ~ .ac-small{
+	height: auto;
+}
+@media (max-width: 1850px) {
+  .cube-image  {
+    display: none;
+  }
+}
+@media (max-width: 1350px)  {
+  .main-container{
+    width: 75%;
+    overflow: visible;
+  }
+  .accordion-container{
+    justify-self: center;
+    align-self: top;
+    margin: 0;
+    width: 375px;
+    bottom: 75px;
+    }
+  .woman-image, .cube-image, .main-container-overlay{
+    display: none;
+  }
+  h1 {
+    text-align: center;
+  }
+  .mobile-container-overlay{
+    background-image: url('../images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 275px;
+    height: 110px;
+    margin: 0 auto;
+  }
+  .woman-image-mobile{
+    display: inline;
+    position: relative;
+    width: 275px;
+    right: 13px;
+    top: -110px;
+  }
+}
+@media (max-width: 875px)  {
+  body{
+    font-size: 15px;
+    line-height: 14px;
+  }
+  .accordion-container label{
+    height: auto;
+  }
+  h1 {
+    margin: 0;
+    margin-top: 75px;
+  }
+}
+@media (max-width: 550px) {
+  body{
+    font-size: 13px;
+    line-height: 11px;
+  }
+  .main-container{
+    width: 365px;
+  }
+  .accordion-container{
+    justify-self: center;
+    align-self: top;
+    margin: 0;
+    width: 275px;
+    bottom: 40px;
+    }
+  .main-container{
+    width: 350px;
+    height: auto;
+    overflow: visible;
+  }
+  h1 {
+    margin: 0;
+    margin-top: 60px;
+  }
+}
