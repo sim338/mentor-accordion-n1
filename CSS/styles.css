@@ -21,7 +21,7 @@ h1{
   display: grid;
   justify-self: center;
   align-self: center;
-  height: 70vh;
+  height: 70%;  /*70vh*/
   width: 1249px;
   background-color: #FFFFFF;
   border-radius:25px;
@@ -47,18 +47,18 @@ h1{
   left: -9%;
   z-index: 4;
   width: 50%;
-  height: auto;
+  height: 50vh;   /*50vh*/
 }
 .woman-image-mobile{
   display: none;
 }
 .cube-image{
-  position: fixed;
+  position: absolute;
   z-index: 20;
-  top: 410px;
-  left: 219px;
+  top: 43.5%;
+  left: 11.4%;
   width: 12.5%;
-  height: auto;
+  height: 24%;
 }
 .accordion-container{
   justify-self: end;
@@ -131,14 +131,15 @@ h1{
 .accordion-container input:checked ~ .ac-small{
 	height: auto;
 }
-@media (max-width: 1850px) {
+/*@media (max-width: 1850px) {
   .cube-image  {
     display: none;
   }
-}
+}*/
 @media (max-width: 1350px)  {
   .main-container{
     width: 75%;
+    height: auto;
     overflow: visible;
   }
   .accordion-container{
@@ -153,6 +154,8 @@ h1{
   }
   h1 {
     text-align: center;
+    margin: 0;
+    margin-top: 75px;
   }
   .mobile-container-overlay{
     background-image: url('../images/bg-pattern-mobile.svg');
@@ -188,9 +191,6 @@ h1{
   body{
     font-size: 13px;
     line-height: 11px;
-  }
-  .main-container{
-    width: 365px;
   }
   .accordion-container{
     justify-self: center;
