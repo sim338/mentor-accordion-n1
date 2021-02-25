@@ -2,12 +2,12 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
-  font-size: 18px;    /*was 13px*/
+  font-size: 17px;    /*was 13px*/
   color: hsl(237, 12%, 33%);
-  line-height: 18px;
+  line-height: 17px;
 }
 h1{
-  font-size: 2.5em;
+  font-size: 2.25em;
   padding-bottom: 0;
   color: hsl(238,29%,16%);
   cursor: default;
@@ -22,8 +22,8 @@ h1{
 .main-container{
   align-items: center;
   display: table;
-  height: 700px;
-  width: 1249px;
+  height: 550px;
+  width: 1050px;
   margin: auto;
   background-color: #FFFFFF;
   border-radius:25px;
@@ -43,10 +43,10 @@ h1{
   z-index: 3;
 }
 .woman-image{
-  position: relative;  /*absolute*/
+  position: relative;
   z-index: 4;
-  right: 110px;
-  width: 625px;
+  right: 102px;
+  width: 550px;
   height: auto;
 
 }
@@ -56,9 +56,9 @@ h1{
 .cube-image{
   position: absolute;
   z-index: 20;
-  top: 43%;
-  left: 10.9%;
-  width: 13.5%;
+  top: 42.3%;
+  left: 16.9%;
+  width: 11.5%;
   height: auto;
 }
 .accordion-container{
@@ -66,7 +66,7 @@ h1{
   vertical-align: middle;
   z-index: 3;
 	width: 450px;
-  padding: 0 142.5px 0 32.5px;
+  padding: 0 90px 0 20px;
 }
 .accordion-container label{   /*this is when closed*/
 	padding: 22px 0px;
@@ -131,12 +131,16 @@ h1{
 .accordion-container input:checked ~ .ac-small{
 	height: auto;
 }
-@media (max-width: 1850px) {
+@media (max-height: 699px) and (max-width: 1850px) {
   .cube-image  {
     display: none;
   }
 }
-@media (max-width: 1350px)  {
+@media (max-height: 699px) and (max-width: 1350px)  {
+  body{
+    font-size: 16.5px;
+    line-height: 16px;
+  }
   .main-container{
     width: 1100px;
     height: auto;
@@ -145,18 +149,18 @@ h1{
   .accordion-container{
     position: relative;
     bottom: 60px;
-    padding: 0 125px 50px 125px;
-    }
+    padding: 0 125px 0 125px;
+  }
   .accordion-container label{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
   .woman-image, .cube-image, .main-container-overlay{
     display: none;
   }
   h1 {
     text-align: center;
-    margin: 10px 0;
+    margin: 7px 0;
   }
   .mobile-container-overlay{
     display: block;
@@ -176,42 +180,79 @@ h1{
     top: -110px;
   }
 }
-@media (max-width: 1100px)  {
+@media (max-height: 699px) and (max-width: 1100px)  {
   body{
-    font-size: 16px;
-    line-height: 15px;
+    font-size: 15.5px;
+    line-height: 14px;
+  }
+  .accordion-container label{
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  h1 {
+    text-align: center;
+    margin: 9px 0;
   }
   .main-container{
     width: 950px;
   }
   .accordion-container label{
-    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
-@media (max-width: 950px) {
+@media (max-height: 699px) and (max-width: 950px) {
   body{
     font-size: 14px;
     line-height: 13px;
+  }
+  .accordion-container label{
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  h1 {
+    text-align: center;
+    margin: 8px 0;
   }
   .main-container{
     width: 650px;
   }
 }
-@media (max-width: 650px) {
+@media (max-height: 699px) and (max-width: 650px) {
+  body{
+    font-size: 12.5px;
+    line-height: 12px;
+  }
+  .accordion-container label{
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  h1 {
+    text-align: center;
+    margin: 7px 0;
+  }
   .main-container{
-    width: 350px;
+    width: 325px;   /*350*/
   }
   .accordion-container{
-    padding: 0 20px 40px 20px;
+    padding: 0 20px 20px 20px;
   }
 }
-@media (max-width: 350px) {
+@media (max-height: 699px) and (max-width: 350px) {
   body{
-    font-size: 12px;
+    font-size: 11px;
     line-height: 11px;
   }
+  .accordion-container label{
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  h1 {
+    text-align: center;
+    margin: 7px 0;
+  }
   .main-container{
-    width: 300px;
+    width: 250px;
     height: auto;
     overflow: visible;
   }
