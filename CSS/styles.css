@@ -14,6 +14,7 @@ h1{
 }
 .wrapper{
   display: flex;
+  width: 100%;
   height: auto;
   min-height: 100vh;
   background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -53,13 +54,14 @@ h1{
 .woman-image-mobile, .mobile-container-overlay{
   display: none;
 }
+
 .cube-image{
-  position: absolute;
+  position: absolute;   /*abs*/
   z-index: 20;
-  top: 43%;
-  left: 10.9%;
-  width: 13.5%;
-  height: auto;
+  top: 43%;     /*43 392px*/
+  left: 10.9%;   /*10.9  212px*/
+  width: 13.5%;   /*13.5 255px*/
+  height: auto;     /*auto*/
 }
 .accordion-container{
   display: table-cell;
@@ -131,7 +133,7 @@ h1{
 .accordion-container input:checked ~ .ac-small{
 	height: auto;
 }
-@media (max-width: 1850px) {
+@media (max-width: 1900px) {
   .cube-image  {
     display: none;
   }
